@@ -1,0 +1,15 @@
+<%= form_for(@message) do |f| %>
+
+  <% if @message.errors.any? %>
+        <% @message.errors.full_messages.each do |msg| %>
+          <p><%= msg %></p>
+        <% end %>
+  <% end %>
+
+    <%= f.label :text %><
+    <%= f.text_area :text %>
+    <%= f.submit %>
+
+<% end %>
+
+<%= link_to 'back', messages_path %>
