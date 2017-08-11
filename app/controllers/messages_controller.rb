@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
+    @message = Message.new
   end
 
   def new
@@ -19,7 +20,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to @message
+      redirect_to messages_path
     else
       render 'new'
     end
