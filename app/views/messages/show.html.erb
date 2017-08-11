@@ -1,4 +1,5 @@
 <p><%= @message.text %></p>
 
 <p><%= link_to 'edit message', edit_message_path(@message) %></p>
+<p><%= link_to 'delete message', message_path(@message), method: :delete, data: { confirm: 'are you sure?' } %></p>
 <p><%= link_to 'all messages', messages_path %></p>
