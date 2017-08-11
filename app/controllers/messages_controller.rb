@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   end
 
   def new
+    @message = Message.new
   end
 
   def show
@@ -13,8 +14,11 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    @message.save
-    redirect_to @message
+    if @message.save
+      redirect_to @message
+    else
+      render 'new'
+    end
   end
 
   def message_params
