@@ -20,7 +20,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to messages_path
     else
-      render 'new'
+      render 'index'
     end
   end
 

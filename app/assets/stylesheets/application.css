@@ -14,6 +14,11 @@ a {
   font-size: 30px
 }
 
+.comment-text {
+  color: #ffefd3;
+  font-size: 20px  
+}
+
 .we-three {
   font-size: 50px;
   border-bottom: 2px solid;
@@ -25,9 +30,30 @@ textarea {
   border-radius: 4px;
   border: none;
   height: 50px;
-  width: 500px
+  width: 500px;
+  color: #0abfbc;
+  font-size: 20px;
+  font-family: 'Artifika', serif;
 }
 
 .message-button {
   font-family: 'Artifika', serif;
+  background-color: #ffefd3;
+  color: #0abfbc;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  width: 80px;
+  font-size: 20px
+}
+
+.comment-button {
+  font-family: 'Artifika', serif;
+  background-color: #ffefd3;
+  color: #0abfbc;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  width: 120px;
+  font-size: 20px
 }

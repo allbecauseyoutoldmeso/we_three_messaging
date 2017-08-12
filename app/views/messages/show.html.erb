@@ -1,19 +1,20 @@
-<p><%= @message.text %></p>
+<p class='message-text'><%= @message.text %></p>
+
 <% @message.comments.each do |comment| %>
   <p><%= comment.user.email %>:</p>
-  <p><%= comment.text %></p>
-  <p><%= comment.time.strftime('%A at %H:%M') %>
+  <p class='comment-text'><%= comment.text %></p>
+  <p><%= comment.time.strftime('%A at %H:%M') %></p>
 
   <% if current_user == comment.user %>
-    <%= link_to 'delete comment', [comment.message, comment], method: :delete %>
+    <p><%= link_to 'delete comment', [comment.message, comment], method: :delete %></p>
   <% end %>
 
 <% end %>
 
 <% if current_user %>
   <%= form_for([@message, @message.comments.build]) do |f| %>
-    <%= f.text_area :text %>
-    <%= f.submit 'comment' %>
+    <p><%= f.text_area :text %></p>
+    <p><%= f.submit 'comment', :class => 'comment-button' %></p>
   <% end %>
 <% end %>
 
