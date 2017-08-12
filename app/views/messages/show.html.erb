@@ -1,8 +1,19 @@
 <p><%= @message.text %></p>
+<% @message.comments.each do |comment| %>
+  <p><%= comment.user.email %>:</p>
+  <p><%= comment.text %></p>
+<% end %>
 
 <% if current_user == @message.user %>
   <p><%= link_to 'edit', edit_message_path(@message) %></p>
   <p><%= link_to 'delete', message_path(@message), method: :delete %></p>
+<% end %>
+
+<% if current_user %>
+  <%= form_for([@message, @message.comments.build]) do |f| %>
+    <%= f.text_area :text %>
+    <%= f.submit 'comment' %>
+  <% end %>
 <% end %>
 
 <p><%= link_to 'all messages', messages_path %></p>
