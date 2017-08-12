@@ -2,6 +2,7 @@
 <% @message.comments.each do |comment| %>
   <p><%= comment.user.email %>:</p>
   <p><%= comment.text %></p>
+  <p><%= comment.time.strftime('%A at %H:%M') %>
 
   <% if current_user == comment.user %>
     <%= link_to 'delete comment', [comment.message, comment], method: :delete %>
