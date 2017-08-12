@@ -19,15 +19,13 @@ class MessagesController < ApplicationController
     @message.time = Time.now
     if @message.save
       redirect_to messages_path
-    else
-      render 'index'
     end
   end
 
   def update
     @message = Message.find(params[:id])
     if @message.update(message_params)
-      redirect_to @message
+      redirect_to messages_path
     else
       render 'edit'
     end

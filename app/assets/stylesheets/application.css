@@ -16,7 +16,7 @@ a {
 
 .comment-text {
   color: #ffefd3;
-  font-size: 20px  
+  font-size: 20px
 }
 
 .we-three {
@@ -55,5 +55,23 @@ textarea {
   border-radius: 4px;
   height: 40px;
   width: 120px;
+  font-size: 20px
+}
+
+.message-elements {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: #13747d;
+}
+
+.login-box {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  height: 30px;
+  width: 300px;
+  font-family: 'Artifika', serif;
+  color: #0abfbc;
   font-size: 20px
 }

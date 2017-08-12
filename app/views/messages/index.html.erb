@@ -4,13 +4,15 @@
 
 <% @messages.reverse.each do |message| %>
 
-    <p><%= message.user.email %>: </p>
-      <p class='message-text'><%= message.text %></p>
-      <p><%= message.time.strftime('%A at %H:%M') %>
-      <p><%= link_to "comments(#{message.comments.count})", message_path(message.id) %> </p>
-    <% if current_user == message.user %>
-      <p><%= link_to 'edit', edit_message_path(message) %> | 
-      <%= link_to 'delete', message_path(message), method: :delete%></p>
-    <% end %>
+    <div class='message-elements'>
+      <p><%= message.user.email %>: </p>
+        <p class='message-text'><%= message.text %></p>
+        <p><%= message.time.strftime('%A at %H:%M') %> |
+        <%= link_to "comments(#{message.comments.count})", message_path(message.id) %> |
+      <% if current_user == message.user %>
+        <%= link_to 'edit', edit_message_path(message) %> |
+        <%= link_to 'delete', message_path(message), method: :delete%></p>
+      <% end %>
+    </div></br>
 
 <% end %>
