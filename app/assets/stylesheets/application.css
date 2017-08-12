@@ -1,9 +1,15 @@
 body {
-  background-color: #0881A3;
-  color: #FDE9DF;
+  background-color: #0abfbc;
+  color: #13747d;
   font-family: 'Artifika', serif;
 }
 
 a {
-  color: #FFD6A4
+  color: #ffefd3;
+  text-decoration: none
+}
+
+.message-text {
+  color: #ffefd3;
+  font-size: 30px
 }
