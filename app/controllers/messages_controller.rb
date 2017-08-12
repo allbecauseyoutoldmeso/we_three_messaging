@@ -16,6 +16,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.user = current_user
+    @message.time = Time.now
     if @message.save
       redirect_to messages_path
     else

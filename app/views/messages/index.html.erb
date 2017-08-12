@@ -2,6 +2,7 @@
 
     <p><%= message.user.email %>: </p>
       <p><%= message.text %></p>
+      <p><%= message.time.strftime('%A at %H:%M') %>
       <p><%= link_to "comments(#{message.comments.count})", message_path(message.id) %> </p>
     <% if current_user == message.user %>
       <p><%= link_to 'edit', edit_message_path(message) %></p>
