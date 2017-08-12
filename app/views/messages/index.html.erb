@@ -1,7 +1,9 @@
 <% @messages.each do |message| %>
-  <p>
-    <%= link_to message.text, message_path(message.id) %>
-  </p>
+  <div>
+    <p><%= link_to message.text, message_path(message.id) %> </p>
+    <p><%= link_to 'edit', edit_message_path(message) %></p>
+    <p><%= link_to 'delete', message_path(message), method: :delete, data: { confirm: 'are you sure?' } %></p>
+  </div>
 <% end %>
 
 <%= render 'form' %>
