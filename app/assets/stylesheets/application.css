@@ -13,3 +13,21 @@ a {
   color: #ffefd3;
   font-size: 30px
 }
+
+.we-three {
+  font-size: 50px;
+  border-bottom: 2px solid;
+  text-align: center
+}
+
+textarea {
+  resize: none;
+  border-radius: 4px;
+  border: none;
+  height: 50px;
+  width: 500px
+}
+
+.message-button {
+  font-family: 'Artifika', serif;
+}

@@ -11,6 +11,8 @@
 
   <body>
 
+    <p class='we-three'> we three </p>
+
     <% if notice %>
       <p><%= notice %></p>
     <% end %>
@@ -19,11 +21,11 @@
     <% end %>
 
     <% if user_signed_in? %>
-      logged in as <%= current_user.email %>
-      <%= link_to "log out", destroy_user_session_path, method: :delete %>
+      <p>logged in as <%= current_user.email %> |
+      <%= link_to "log out", destroy_user_session_path, method: :delete %></p>
     <% else %>
-      <%= link_to "sign up", new_user_registration_path %>
-      <%= link_to "log in", new_user_session_path %>
+      <p><%= link_to "sign up", new_user_registration_path %> | 
+      <%= link_to "log in", new_user_session_path %></p>
     <% end %>
 
     <%= yield %>
