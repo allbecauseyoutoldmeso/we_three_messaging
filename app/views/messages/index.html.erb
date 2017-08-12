@@ -1,13 +1,13 @@
 <% @messages.each do |message| %>
-  <div>
+
     <p><%= message.user.email %>: </p>
-      <p><%= link_to message.text, message_path(message.id) %> </p>
+      <p><%= message.text %></p>
+      <p><%= link_to "comments(#{message.comments.count})", message_path(message.id) %> </p>
     <% if current_user == message.user %>
       <p><%= link_to 'edit', edit_message_path(message) %></p>
       <p><%= link_to 'delete', message_path(message), method: :delete%></p>
     <% end %>
 
-  </div>
 <% end %>
 
 <% if current_user %>

@@ -3,13 +3,10 @@
   <p><%= comment.user.email %>:</p>
   <p><%= comment.text %></p>
 
-  <%= link_to 'delete comment', [comment.message, comment], method: :delete %>
+  <% if current_user == comment.user %>
+    <%= link_to 'delete comment', [comment.message, comment], method: :delete %>
+  <% end %>
 
-<% end %>
-
-<% if current_user == @message.user %>
-  <p><%= link_to 'edit', edit_message_path(@message) %></p>
-  <p><%= link_to 'delete', message_path(@message), method: :delete %></p>
 <% end %>
 
 <% if current_user %>
