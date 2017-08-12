@@ -2,6 +2,9 @@
 <% @message.comments.each do |comment| %>
   <p><%= comment.user.email %>:</p>
   <p><%= comment.text %></p>
+
+  <%= link_to 'delete comment', [comment.message, comment], method: :delete %>
+
 <% end %>
 
 <% if current_user == @message.user %>
