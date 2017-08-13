@@ -1,13 +1,16 @@
+<p><%= @message.user.email %>:</p>
 <p class='message-text'><%= @message.text %></p>
 
 <% @message.comments.each do |comment| %>
-  <p><%= comment.user.email %>:</p>
-  <p class='comment-text'><%= comment.text %></p>
-  <p><%= comment.time.strftime('%A at %H:%M') %></p>
 
-  <% if current_user == comment.user %>
-    <p><%= link_to 'delete comment', [comment.message, comment], method: :delete %></p>
-  <% end %>
+  <div class='message-elements'>
+    <p><%= comment.user.email %>:</p>
+    <p class='comment-text'><%= comment.text %></p>
+    <p><%= comment.time.strftime('%A at %H:%M') %> |
+    <% if current_user == comment.user %>
+      <%= link_to 'delete', [comment.message, comment], method: :delete %></p>
+    <% end %>
+  </div></br>
 
 <% end %>
 

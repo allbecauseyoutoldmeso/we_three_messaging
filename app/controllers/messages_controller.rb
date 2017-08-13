@@ -19,6 +19,9 @@ class MessagesController < ApplicationController
     @message.time = Time.now
     if @message.save
       redirect_to messages_path
+    else
+      @messages = Message.all
+      render 'index'
     end
   end
 
