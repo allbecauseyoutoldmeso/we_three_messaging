@@ -10,6 +10,20 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @message = Message.find(params[:message_id])
+    @comment = @message.comments.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    if @comment.update(comment_params)
+      redirect_to message_path(@comment.message)
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     @message = Message.find(params[:message_id])
     @comment = @message.comments.find(params[:id])

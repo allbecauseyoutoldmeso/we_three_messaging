@@ -8,7 +8,8 @@
     <p class='comment-text'><%= comment.text %></p>
     <p><%= comment.time.strftime('%A at %H:%M') %> |
     <% if current_user == comment.user %>
-      <%= link_to 'delete', [comment.message, comment], method: :delete %></p>
+      <%= link_to 'delete', [comment.message, comment], method: :delete %> |
+      <%= link_to 'edit', edit_message_comment_path(comment.message, comment) %></p>
     <% end %>
   </div></br>
 
