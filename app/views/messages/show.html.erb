@@ -1,5 +1,8 @@
-<p><%= @message.user.email %>:</p>
-<p class='message-text'><%= @message.text %></p>
+<p><%= @message.user.email %> wrote
+<span class='big-message-text'>'<%= @message.text %>'</span>
+on <%= @message.time.strftime('%A at %H:%M')%></p>
+
+<p>comments on this message:</p>
 
 <% @message.comments.each do |comment| %>
 

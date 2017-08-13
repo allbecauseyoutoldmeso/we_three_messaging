@@ -11,7 +11,12 @@ a {
 
 .message-text {
   color: #ffefd3;
-  font-size: 30px
+  font-size: 25px
+}
+
+.big-message-text {
+  color: #ffefd3;
+  font-size: 35px
 }
 
 .comment-text {
