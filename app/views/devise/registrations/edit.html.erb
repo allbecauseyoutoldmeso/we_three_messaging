@@ -1,10 +1,10 @@
-<p>edit user account</p>
+<p>edit user account:</p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <p>
-    <%= f.label :email %><br />
+    <%= f.label :email, 'email' %><br />
     <%= f.email_field :email, autofocus: true, :class => 'login-box' %>
   </p>
 
@@ -13,7 +13,7 @@
   <% end %>
 
   <p>
-    <%= f.label :password %> (leave blank if you don't want to change it)<br />
+    <%= f.label :password, 'new password' %> (leave blank if you don't want to change it)<br />
     <%= f.password_field :password, autocomplete: "off", :class => 'login-box' %>
     <% if @minimum_password_length %>
       <br />
@@ -22,22 +22,20 @@
   </p>
 
   <p>
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, 'confirm new password' %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'login-box' %>
   </p>
 
   <p>
-    <%= f.label :current_password %> <br />
+    <%= f.label :current_password, 'current password' %> <br />
     <%= f.password_field :current_password, autocomplete: "off", :class => 'login-box' %>
   </p>
 
   <div class="actions">
-    <%= f.submit "Update", :class => 'comment-button' %>
+    <%= f.submit 'update', :class => 'comment-button' %>
   </div>
 <% end %>
 
-<p>cancel account?</p>
-
-<p><%= button_to "cancel", registration_path(resource_name), method: :delete, :class => 'comment-button' %></p>
+<p><%= button_to "cancel account", registration_path(resource_name), method: :delete, :class => 'cancel-button' %></p>
 
 <%= link_to "back", :back %>

@@ -75,3 +75,14 @@ textarea {
   color: #0abfbc;
   font-size: 20px
 }
+
+.cancel-button {
+  font-family: 'Artifika', serif;
+  background-color: #ffefd3;
+  color: red;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  width: 240px;
+  font-size: 20px
+}
