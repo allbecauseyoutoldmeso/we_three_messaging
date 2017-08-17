@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     @message.user = current_user
     @message.time = Time.now
     if @message.save
-      MessageMailer.notification_email(@message.user, @message).deliver_now
+      # MessageMailer.notification_email(@message.user, @message).deliver_now
       redirect_to messages_path
     else
       @messages = Message.all
