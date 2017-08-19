@@ -2,7 +2,8 @@
 
 * A Ruby on Rails messaging app.
 * Users can open an account, leave messages, and comment on each other's messages.
-* Not quite ready to go live yet.
+* Check it out live <a href='https://we-three.herokuapp.com/messages'>here</a>.
+* A work in progress - planned features include picture-messages and email alerts. 
 
 <img width="1259" alt="screen shot 2017-08-13 at 20 45 48" src="https://user-images.githubusercontent.com/25392162/29252929-83ffe092-8068-11e7-85a2-7e11b7dcccee.png">
 
