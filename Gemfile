@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'pry'
+gem 'twilio-ruby'
 gem 'devise'
 gem 'rails', '~> 5.1.3'
 gem 'pg', '~> 0.18.4'
