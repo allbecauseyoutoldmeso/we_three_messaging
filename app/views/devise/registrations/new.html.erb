@@ -7,6 +7,11 @@
   </p>
 
   <p>
+    <%= f.label :mobile, 'mobile number' %><br />
+    <%= f.text_field :mobile, :class => 'login-box'  %>
+  </p>
+
+  <p>
     <%= f.label :password, 'password' %>
     <% if @minimum_password_length %>
     (<%= @minimum_password_length %> characters minimum)

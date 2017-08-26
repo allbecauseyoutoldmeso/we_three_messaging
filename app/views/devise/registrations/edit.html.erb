@@ -8,6 +8,11 @@
     <%= f.email_field :email, autofocus: true, :class => 'login-box' %>
   </p>
 
+  <p>
+    <%= f.label :mobile, 'mobile number' %><br />
+    <%= f.text_field :mobile, :class => 'login-box' %>
+  </p>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
   <% end %>
